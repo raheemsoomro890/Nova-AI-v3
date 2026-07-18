@@ -1,105 +1,48 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nova AI</title>
-
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nova AI</title>
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <!-- Startup Screen -->
   <div id="startupScreen">
-    <div class="startup-content">
-
-      <div class="nova-ring">
-        <div class="ring1"></div>
-        <div class="ring2"></div>
-        <div class="ring3"></div>
-
-        <div class="nova-text">
-          NOVA AI
-        </div>
-      </div>
-
-      <p id="bootText">
-        Initializing...
-      </p>
-
-    </div>
+    <div id="bootText">Initializing...</div>
   </div>
 
-  <!-- App -->
   <div class="app">
 
-    <!-- Sidebar -->
     <aside class="sidebar">
-
-      <div class="logo">
-        🤖 <span>Nova AI</span>
+      <div class="sidebar-header">
+        <div class="logo"></div>
+        <div class="brand">Nova AI</div>
       </div>
 
-      <button id="newChatBtn" class="new-chat">
-        + New Chat
+      <button id="newChatBtn" type="button">
+        <span>+ New Chat</span>
       </button>
 
-      <h3 class="history-heading">
-        Recent Chats
-      </h3>
-
-      <div id="chatHistory" class="chat-history"></div>
-
+      <div id="chatHistory"></div>
     </aside>
 
-    <!-- Main -->
     <main class="main">
 
-      <header class="topbar">
+      <div id="messages"></div>
 
-        <div>
-          <h1>Nova AI</h1>
-          <p>Your Intelligent AI Assistant</p>
-        </div>
-
-        <div class="status">
-          🟢 Online
-        </div>
-
-      </header>
-
-      <section class="chat-container">
-
-        <div id="messages" class="messages"></div>
-
-        <div class="input-area">
-
-          <input
-            type="text"
-            id="userInput"
-            placeholder="Message Nova AI..."
-            autocomplete="off">
-
-          <button id="micBtn" class="mic-btn">
-            🎤
-          </button>
-
-          <button id="sendBtn">
-            ➤
-          </button>
-
-        </div>
-
-      </section>
+      <div class="input-area">
+        <textarea id="userInput" rows="1" placeholder="Message Nova AI..."></textarea>
+        <button id="micBtn" type="button" title="Voice input">🎤</button>
+        <button id="sendBtn" type="button" title="Send message">➤</button>
+      </div>
 
     </main>
 
   </div>
 
   <script src="script.js"></script>
-
 </body>
-
-  </html>
+</html>
+```
